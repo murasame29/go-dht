@@ -3,7 +3,7 @@ package dht
 import (
 	"time"
 
-	"periph.io/x/conn/v3/gpio"
+	"github.com/stianeikeland/go-rpio/v4"
 )
 
 // TemperatureUnit is the temperature unit wanted, either Celsius or Fahrenheit
@@ -19,7 +19,7 @@ const (
 // DHT struct to interface with the sensor.
 // Call NewDHT to create a new one.
 type DHT struct {
-	pin             gpio.PinIO
+	pin             rpio.Pin
 	temperatureUnit TemperatureUnit
 	sensorType      string
 	numErrors       int

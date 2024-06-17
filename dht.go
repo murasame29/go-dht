@@ -3,15 +3,7 @@ package dht
 import (
 	"fmt"
 	"time"
-
-	"periph.io/x/host/v3"
 )
-
-// HostInit calls periph.io host.Init(). This needs to be done before DHT can be used.
-func HostInit() error {
-	_, err := host.Init()
-	return err
-}
 
 // Read reads the sensor once, returing humidity and temperature, or an error.
 // Note that Read will sleep for at least 2 seconds between last call.
